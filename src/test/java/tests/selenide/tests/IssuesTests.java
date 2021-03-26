@@ -13,7 +13,7 @@ public class IssuesTests extends TestBase {
 
     @Test
     void checkIssueName(){
-        open("", MainPage.class)
+        open("/", MainPage.class)
                 .search(repositoryName)
                 .clickOnLinkWithText(repositoryName)
                 .gotoIssues()

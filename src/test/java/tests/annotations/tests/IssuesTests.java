@@ -16,7 +16,7 @@ public class IssuesTests extends TestBase {
     @Test
     @DisplayName("Checking issue name")
     void checkIssueName(){
-        open("", MainPage.class)
+        open("/", MainPage.class)
                 .search(repositoryName)
                 .clickOnLinkWithText(repositoryName)
                 .gotoIssues()
