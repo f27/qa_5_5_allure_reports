@@ -12,13 +12,10 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.CRITICAL;
+import static tests.TestData.*;
 
 @DisplayName("Issue tests with lambda")
 public class IssuesTests extends TestBase {
-    private static final String
-            repositoryName = "f27/qa_5_5_allure_reports",
-            issueText = "This is test issue",
-            issueComment = "New issue for test";
 
     @Test
     @DisplayName("Checking issue name")
