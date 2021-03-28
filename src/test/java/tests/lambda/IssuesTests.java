@@ -14,6 +14,7 @@ import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.CRITICAL;
 import static tests.TestData.*;
 
+@DisplayName("Issue tests with lambda")
 public class IssuesTests extends TestBase {
 
     @Test
