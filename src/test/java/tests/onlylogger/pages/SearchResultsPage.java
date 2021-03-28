@@ -1,4 +1,4 @@
-package tests.selenide.pages;
+package tests.onlylogger.pages;
 
 import com.codeborne.selenide.SelenideElement;
 

@@ -8,7 +8,6 @@ import tests.annotations.pages.MainPage;
 import static com.codeborne.selenide.Selenide.open;
 import static tests.TestData.*;
 
-@DisplayName("Issue tests with annotations")
 public class IssuesTests extends TestBase {
 
     @Test

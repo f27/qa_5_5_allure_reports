@@ -1,8 +1,8 @@
-package tests.selenide.tests;
+package tests.onlylogger.tests;
 
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
-import tests.selenide.pages.MainPage;
+import tests.onlylogger.pages.MainPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static tests.TestData.*;
