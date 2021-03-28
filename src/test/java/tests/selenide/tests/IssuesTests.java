@@ -8,8 +8,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class IssuesTests extends TestBase {
     private static final String
-            repositoryName = "eroshenkoam/allure-qaguru",
-            issueText = "Заменяем степы на Listener";
+            repositoryName = "f27/qa_5_5_allure_reports",
+            issueText = "This is test issue",
+            issueComment = "New issue for test";
 
     @Test
     void checkIssueName(){
@@ -17,6 +18,7 @@ public class IssuesTests extends TestBase {
                 .search(repositoryName)
                 .clickOnLinkWithText(repositoryName)
                 .gotoIssues()
-                .shouldHaveIssue(issueText);
+                .clickOnIssue(issueText)
+                .shouldHaveComment(issueComment);
     }
 }
