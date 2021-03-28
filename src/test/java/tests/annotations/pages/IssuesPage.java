@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.page;
 public class IssuesPage {
     private static final SelenideElement issuesDiv = $("div[aria-label=Issues]");
 
-    @Step("Click on issue '{issueText}'")
+    @Step("Click on issue {issueText}")
     public IssuePage clickOnIssue(String issueText) {
         issuesDiv.$(byLinkText(issueText)).click();
 
