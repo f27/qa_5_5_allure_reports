@@ -18,13 +18,13 @@ import static tests.TestData.*;
 public class IssuesTests extends TestBase {
 
     @Test
-    @DisplayName("Checking issue name")
+    @DisplayName("Checking issue's name and comment")
     @Owner("f27")
     @Feature("Issues")
     @Severity(CRITICAL)
     @Epic("GitHub web")
     @Description("Search for repository, going to repository's page, going to issues tab and verify that the issue exist")
-    void checkIssueName() {
+    void checkIssueTest() {
 
         step("Open main page", () -> open("/"));
 

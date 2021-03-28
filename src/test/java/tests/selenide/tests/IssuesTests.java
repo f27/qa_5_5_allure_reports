@@ -10,7 +10,7 @@ import static tests.TestData.*;
 public class IssuesTests extends TestBase {
 
     @Test
-    void checkIssueName(){
+    void checkIssueTest(){
         open("/", MainPage.class)
                 .search(repositoryName)
                 .clickOnLinkWithText(repositoryName)
