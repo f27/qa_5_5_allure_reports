@@ -1,6 +1,7 @@
 plugins {
-    id 'java-library'
+    id 'java'
     id 'io.qameta.allure' version '2.8.1'
+    id "org.gradle.test-retry" version "1.2.1"
 }
 
 repositories {
@@ -36,6 +37,15 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+boolean isCiServer = System.getenv().containsKey("CI")
+
 test {
     useJUnitPlatform()
+    if (isCiServer) {
+        retry {
+            maxRetries = 1
+            maxFailures = 20
+            failOnPassedAfterRetry = true
+        }
+    }
 }
