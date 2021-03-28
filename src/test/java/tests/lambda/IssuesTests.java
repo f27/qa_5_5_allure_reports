@@ -16,8 +16,9 @@ import static io.qameta.allure.SeverityLevel.CRITICAL;
 @DisplayName("Issue tests with lambda")
 public class IssuesTests extends TestBase {
     private static final String
-            repositoryName = "eroshenkoam/allure-qaguru",
-            issueText = "Заменяем степы на Listener";
+            repositoryName = "f27/qa_5_5_allure_reports",
+            issueText = "This is test issue",
+            issueComment = "New issue for test";
 
     @Test
     @DisplayName("Checking issue name")
@@ -42,8 +43,14 @@ public class IssuesTests extends TestBase {
 
         step("Going to issues tab", () -> $("[data-content=Issues]").click());
 
-        step("Check if issue '" + issueText + "' exists", () -> {
-            $("div[aria-label=Issues]").shouldHave(text(issueText));
+        step("Click on issue '" + issueText + "'", (step) -> {
+            step.parameter("Issue name", issueText);
+            $("div[aria-label=Issues]").$(byLinkText(issueText)).click();
+        });
+
+        step("Click on issue '" + issueComment + "'", (step) -> {
+            step.parameter("Issue comment", issueComment);
+            $(".js-comment-body").shouldHave(text(issueComment));
         });
     }
 }
