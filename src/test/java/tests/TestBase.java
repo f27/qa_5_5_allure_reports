@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 public class TestBase {
     @BeforeAll
     static void setup() {
-        SelenideLogger.addListener("allure", new AllureSelenide().screenshots(true));
+        SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.startMaximized = true;
         Configuration.baseUrl = "https://github.com";
     }
