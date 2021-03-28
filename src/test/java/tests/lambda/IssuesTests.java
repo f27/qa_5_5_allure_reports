@@ -45,7 +45,7 @@ public class IssuesTests extends TestBase {
             $("div[aria-label=Issues]").$(byLinkText(issueText)).click();
         });
 
-        step("Click on issue " + issueComment, (step) -> {
+        step("Issue should have comment: " + issueComment, (step) -> {
             step.parameter("Issue comment", issueComment);
             $(".js-comment-body").shouldHave(text(issueComment));
         });

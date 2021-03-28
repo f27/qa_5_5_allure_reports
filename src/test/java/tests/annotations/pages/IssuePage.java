@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class IssuePage {
     private static final SelenideElement issueComment = $(".js-comment-body");
 
-    @Step("Issue '{comment}' should exist")
+    @Step("Issue should have comment: {comment}")
     public IssuePage shouldHaveComment(String comment) {
         issueComment.shouldHave(text(comment));
 
